@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- For those not familiar with XML, this is a comment! Each field in -->
+<!-- this XML file has a description of its purpose. Note the encoding -->
+<!-- used is UTF-8 so make sure you use an UTF-8 aware editor when     -->
+<!-- changing this file if you're using non-English characters. -->
+
+<!-- Read the section 'Server Setup' in the SDK's documentation for a -->
+<!-- complete description on how to configure the TeamTalk 4 Server. -->
+
+<teamtalk version="4.0">
+    <general>
+        <file-storage>
+            <!-- Directory of where to store files uploaded by users. -->
+            <files-root></files-root>
+            <!-- The maximum number of bytes the server can use for
+                 storing files. -->
+            <max-diskusage>0</max-diskusage>
+            <!-- The default disk quota for new channels created by
+                 users. -->
+            <channel-diskquota>0</channel-diskquota>
+        </file-storage>
+        <user-rights>
+            <!-- Users should be allowed to create channels on the
+                 server. -->
+            <channel-creation>true</channel-creation>
+            <!-- Users become channel operators when they create a new
+                 channel on the server. -->
+            <channel-operators>true</channel-operators>
+            <!-- Users can issue channel commands, e.g. use '/help',
+                 '/op', etc. -->
+            <channel-commands>true</channel-commands>
+            <!-- Users can modify subscriptions, i.e. ignore text
+                 message, audio and video from certain users. -->
+            <modify-subscriptions>true</modify-subscriptions>
+            <!-- Users, not just admins, can broadcast text message. -->
+            <client-broadcast>false</client-broadcast>
+            <!-- Users can see other users outside their own channel. -->
+            <view-all-users>true</view-all-users>
+            <!-- Users can log in without an account. -->
+            <guest-login>true</guest-login>
+            <!-- Multiple users can use the same user account. -->
+            <double-login>true</double-login>
+            <!-- Users can forward audio data through the server. If
+                 disabled users must use P2P mode.  -->
+            <forward-audio>true</forward-audio>
+            <!-- Users can forward video data through the server. If
+                 disabled users must use P2P mode.  -->
+            <forward-video>true</forward-video>
+        </user-rights>
+        <!-- The server's name. -->
+        <server-name>TeamTalk Server</server-name>
+        <!-- The server's message of the day. Available to users after
+             a successful login. -->
+        <motd></motd>
+        <!-- The maximum number of users on the server. Maximum
+             supported is 1000. -->
+        <max-users>1000</max-users>
+        <!-- Auto save changes made by administrators to the server,
+             i.e. updating server properties, creating static
+             channels, updating static channels and deleting static
+             channels. -->
+        <auto-save>true</auto-save>
+        <!-- The IP-address the server should bind to. If you have
+             multiple IP-addresses on your server it is advised to
+             specify which IP-address to bind to. -->
+        <bind-ip></bind-ip>
+        <!-- The server's TCP port which accepts new client 
+             connections. -->
+        <tcpport>10333</tcpport>
+        <!-- The server's UDP port for transmitting audio and video
+             data. -->
+        <udpport>10333</udpport>
+        <!-- The server's password which users must specify to log on
+             to the server. Also even if they have a user account on
+             the server. -->
+        <server-password></server-password>
+        <!-- The maximum size of the server's log file before it
+             creates a new file. Old log file is post-fixed a log
+             number. -->
+        <server-log-maxsize>0</server-log-maxsize>
+        <!-- The maximum number of incorrect login attempts before
+             banning a user's IP-address -->
+        <login-attempts>0</login-attempts>
+    </general>
+    <users />
+</teamtalk>
